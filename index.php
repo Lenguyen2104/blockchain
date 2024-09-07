@@ -25,11 +25,11 @@ define('UPLOAD_PATH', './Upload/');
 // 定义数据库类型
 define('DB_TYPE', 'mysql');
 // 定义数据库地址  蜜桃源码网--www.mitaobo.com
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 // 定义数据库名
-define('DB_NAME', 'busnt');
+define('DB_NAME', '');
 // 定义数据库账号
-define('DB_USER', 'root');
+define('DB_USER', '');
 // 定义数据库密码
 define('DB_PWD', '');
 // 定义数据库端口
@@ -38,16 +38,17 @@ define('DB_PORT', '3306');
 
 // 开启演示模式
 define('APP_DEMO',0);
-// 短信模式 0 是演示模式  1 是正式模式
-define('MOBILE_CODE',0);
+// 短信模式 0是演示模式  1是正式模式
+define('MOBILE_CODE',1);
 // 开始调试模式
-define('M_DEBUG', 0);
+define('M_DEBUG', 1);
 //平台币
 define('PT_COIN', 'MBN');
 // 定义授权码
 define('MSCODE', '95D3A7E98EE9F913B462B87C73DS');
 // 定义互转APIKEY,两端必须一致
 define('BBAPIKEY', 'RkAyda9huaQYux6R');
+
 
 function wherecome()
 {
@@ -81,6 +82,7 @@ function wherecome()
 
 // 判断访问入口
 if(wherecome()) {
+
     define('WHERECOME','Mobile');
 } else {
     //define('WHERECOME','Mobile');
@@ -89,3 +91,4 @@ if(wherecome()) {
 
 // 引入入口文件
 require './ThinkPHP/ThinkPHP.php';
+?>
