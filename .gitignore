@@ -1,0 +1,8 @@
+# gitignore template for ThinkPHP v3.2.3
+# website: http://www.thinkphp.cn/
+Runtime/
+# Logs and Cache files
+Application/Runtime/
+#index
+/index.php
+index.php
